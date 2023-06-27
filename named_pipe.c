@@ -23,15 +23,8 @@ int named_pipe(const char *path, const int read_flag)
 
     if (fd < 0)
     {
-      n = mknod(path, __S_IFIFO | S_IRWXU, 0);
-
-      if (n < 0)
-      {
-        printf("Error creating named pipe\n");
-        return -1;
-      }
-
-      fd = open(path, O_WRONLY);
+      printf("Error opening named pipe\n");
+      return -1;
     }
 
     printf("type :q to exit\n----------------\n");

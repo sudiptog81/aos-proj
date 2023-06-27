@@ -120,6 +120,7 @@ Functions</h2></td></tr>
 <p>Uses named pipes for message passing between reader and writer processes. </p>
 <p>If invoked in write mode, the program will create a named pipe at the specified path if it doesn't exist and write to it. If invoked in read mode, the program will wait for a writer to write to the named pipe and then read from it.</p>
 <p>In write mode, the user is prompted to enter a message to write to the named pipe. The user can exit the program by entering <code>:q</code> as the message.</p>
+<p>This function is invoked by the <code>pipe</code> command.</p>
 <p>In read mode, the program will wait for a writer to write to the named pipe and then read from it. The process will exit when it receives <code>:q</code> from the writer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

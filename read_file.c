@@ -10,7 +10,7 @@
 
 extern char buf[1024];
 
-int read_file(const char *path)
+int read_file(const char *path, const int offset, const int nBytes)
 {
   long tot = 0;
   flush_buffer(buf);
@@ -23,10 +23,29 @@ int read_file(const char *path)
     return -1;
   }
 
+  // seek to offset and handle errors
+  if (lseek(fd, offset, SEEK_SET) < 0)
+  {
+    printf("Error seeking to offset\n");
+    return -1;
+  }
+
   // read file content to buffer and write to stdout
   // also keep track of total bytes read
-  while ((n = read(fd, buf, sizeof(buf))) > 0)
+  if (nBytes < 0)
   {
+    // read entire file
+    while ((n = read(fd, buf, sizeof(buf))) > 0)
+    {
+      printf("%s", buf);
+      flush_buffer(buf);
+      tot += n;
+    }
+  }
+  else
+  {
+    // read nBytes from file
+    n = read(fd, buf, nBytes);
     printf("%s", buf);
     flush_buffer(buf);
     tot += n;

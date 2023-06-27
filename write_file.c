@@ -8,7 +8,7 @@
 
 #include "helpers.h"
 
-int write_file(const char *path, const int force_flag)
+int write_file(const char *path, const int offset, const int nBytes, const int force_flag)
 {
   int n, fd;
   char *string;
@@ -20,9 +20,13 @@ int write_file(const char *path, const int force_flag)
     fd = open(path, O_WRONLY);
     if (fd > -1)
     {
-      printf("Destination file already exists. Use -f to force copy.\n");
+      printf("Destination file already exists. Use -f to force write.\n");
       close(fd);
       return -1;
+    }
+    else
+    {
+      fd = open(path, O_WRONLY | O_CREAT, 0644);
     }
   }
   // create file if it doesn't exist when -f is used
@@ -38,26 +42,47 @@ int write_file(const char *path, const int force_flag)
     return -1;
   }
 
-    printf("type :w to exit\n---------------\n");
+  // move file pointer to offset
+  if (offset > 0)
+  {
+    lseek(fd, offset, SEEK_SET);
+  }
 
-  while (1)
+  printf("type :w to exit\n---------------\n");
+
+  if (nBytes < 0)
+  {
+    while (1)
+    {
+      // allocate memory for string
+      string = (char *)(malloc(sizeof(char) * len));
+      flush_buffer(string);
+
+      // get input from stdin
+      getline(&string, &len, stdin);
+
+      // exit if :w is typed
+      if (strcmp(string, ":w\n") == 0)
+      {
+        break;
+      }
+
+      // write string to file and free memory for string
+      write(fd, string, strlen(string));
+      free(string);
+    }
+  }
+  else
   {
     // allocate memory for string
-    string = (char *)(malloc(sizeof(char) * len));
+    string = (char *)(malloc(sizeof(char) * nBytes));
     flush_buffer(string);
 
     // get input from stdin
-    getline(&string, &len, stdin);
-
-    // exit if :w is typed
-    if (strcmp(string, ":w\n") == 0)
-    {
-      break;
-    }
+    n = read(STDIN_FILENO, string, nBytes + 1);
 
     // write string to file and free memory for string
-    write(fd, string, strlen(string));
-    free(string);
+    write(fd, string, n);
   }
 
   // free memory for string and close file descriptor

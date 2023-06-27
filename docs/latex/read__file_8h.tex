@@ -1,0 +1,47 @@
+\hypertarget{read__file_8h}{}\doxysection{read\+\_\+file.\+h File Reference}
+\label{read__file_8h}\index{read\_file.h@{read\_file.h}}
+
+
+Module to read a file using system calls.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{read__file_8h_a40423ecfeb452c5d727239cbb5489a63}{read\+\_\+file}} (const char $\ast$, const int, const int)
+\begin{DoxyCompactList}\small\item\em Reads a regular file using the {\ttfamily read()} system call and writes the content to {\ttfamily stdout}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module to read a file using system calls. 
+
+\begin{DoxyAuthor}{Author}
+Sudipto Ghosh 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{read__file_8h_a40423ecfeb452c5d727239cbb5489a63}\label{read__file_8h_a40423ecfeb452c5d727239cbb5489a63}} 
+\index{read\_file.h@{read\_file.h}!read\_file@{read\_file}}
+\index{read\_file@{read\_file}!read\_file.h@{read\_file.h}}
+\doxysubsubsection{\texorpdfstring{read\_file()}{read\_file()}}
+{\footnotesize\ttfamily int read\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const int}]{offset,  }\item[{const int}]{n\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Reads a regular file using the {\ttfamily read()} system call and writes the content to {\ttfamily stdout}. 
+
+This function is invoked by the {\ttfamily read} command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the absolute or relative path to the file to be read \\
+\hline
+{\em offset} & the offset from the beginning of the file \\
+\hline
+{\em n\+Bytes} & the number of bytes to read from the file, -\/1 to read the entire file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n\+Bytes denoting number of bytes read from file, -\/1 on failure 
+\end{DoxyReturn}

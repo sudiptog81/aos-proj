@@ -17,6 +17,8 @@
  * In write mode, the user is prompted to enter a message to write to the named pipe.
  * The user can exit the program by entering `:q` as the message.
  *
+ * This function is invoked by the `pipe` command.
+ *
  * In read mode, the program will wait for a writer to write to the named pipe and
  * then read from it. The process will exit when it receives `:q` from the writer.
  *

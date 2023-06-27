@@ -5,6 +5,7 @@
 #include "create_file.h"
 #include "named_pipe.h"
 #include "read_file.h"
+#include "stat_file.h"
 #include "unnamed_pipe.h"
 #include "write_file.h"
 

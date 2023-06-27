@@ -83,16 +83,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a39f679eb885bba628903decdefd177ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__file_8h.html#a39f679eb885bba628903decdefd177ac">read_file</a> (const char *)</td></tr>
-<tr class="memdesc:a39f679eb885bba628903decdefd177ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a regular file using the <code>read()</code> system call and writes the content to <code>stdout</code>.  <br /></td></tr>
-<tr class="separator:a39f679eb885bba628903decdefd177ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40423ecfeb452c5d727239cbb5489a63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__file_8h.html#a40423ecfeb452c5d727239cbb5489a63">read_file</a> (const char *, const int, const int)</td></tr>
+<tr class="memdesc:a40423ecfeb452c5d727239cbb5489a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a regular file using the <code>read()</code> system call and writes the content to <code>stdout</code>.  <br /></td></tr>
+<tr class="separator:a40423ecfeb452c5d727239cbb5489a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module to read a file using system calls. </p>
 <dl class="section author"><dt>Author</dt><dd>Sudipto Ghosh </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a39f679eb885bba628903decdefd177ac" name="a39f679eb885bba628903decdefd177ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39f679eb885bba628903decdefd177ac">&#9670;&#160;</a></span>read_file()</h2>
+<a id="a40423ecfeb452c5d727239cbb5489a63" name="a40423ecfeb452c5d727239cbb5489a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40423ecfeb452c5d727239cbb5489a63">&#9670;&#160;</a></span>read_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -101,17 +101,35 @@ Functions</h2></td></tr>
           <td class="memname">int read_file </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nBytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Reads a regular file using the <code>read()</code> system call and writes the content to <code>stdout</code>. </p>
-<p>Usage: <code>read_file("/tmp/passwd");</code></p>
+<p>This function is invoked by the <code>read</code> command.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>the absolute or relative path to the file to be read </td></tr>
+    <tr><td class="paramname">offset</td><td>the offset from the beginning of the file </td></tr>
+    <tr><td class="paramname">nBytes</td><td>the number of bytes to read from the file, -1 to read the entire file </td></tr>
   </table>
   </dd>
 </dl>

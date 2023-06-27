@@ -8,20 +8,22 @@
  */
 
 /**
- * @brief Creates a regular file using the `creat()` system call.
+ * @brief Creates a regular file or a named pipe using the `creat()` or `mknod()`
+ * system call.
  *
  * It also sets the file permissions to `perms` by using the mode bits supplied.
  *
- * Usage: `create_file("/tmp/passwd", atoi(argv[3]));`
+ * This function is invoked by the `create` command.
  *
  * In case the target file already exists, the user is prompted for confirmation
  * and needs to pass the `-f` flag to force this operation.
  *
  * @param path the absolute or relative path of the file to create with filename
  * @param perms the permissions to set for the file using mode bits
+ * @param file_type flag to denote regular file or named pipe
  * @param force_flag flag to force create if the file exists
  * @return 0 on success, -1 on failure
  */
-int create_file(const char *, const int, const int);
+int create_file(const char *, const int, const int, const int);
 
 #endif

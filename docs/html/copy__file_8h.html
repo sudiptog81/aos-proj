@@ -84,7 +84,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad28eaa2c4dc2e9b301bec6a5441ae3ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="copy__file_8h.html#ad28eaa2c4dc2e9b301bec6a5441ae3ec">copy_file</a> (const char *, const char *, const int)</td></tr>
-<tr class="memdesc:ad28eaa2c4dc2e9b301bec6a5441ae3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a regular file using the <code>read()</code> and <code>write()</code> system calls.  <br /></td></tr>
+<tr class="memdesc:ad28eaa2c4dc2e9b301bec6a5441ae3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a regular file using an unnamed pipe and the <code>read()</code> and <code>write()</code> system calls.  <br /></td></tr>
 <tr class="separator:ad28eaa2c4dc2e9b301bec6a5441ae3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -123,9 +123,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Copies a regular file using the <code>read()</code> and <code>write()</code> system calls. </p>
+<p>Copies a regular file using an unnamed pipe and the <code>read()</code> and <code>write()</code> system calls. </p>
 <p>It copies the content of the source file specified by <code>src</code> to the target specified by the <code>dest</code> parameter.</p>
-<p>Usage: <code>copy_file("/tmp/passwd", "/tmp/passwd.oldbak", 0);</code></p>
+<p>This function is invoked by the <code>copy</code> command.</p>
 <p>In case the target file already exists, the user is prompted for confirmation and needs to pass the <code>-f</code> flag to force this operation.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

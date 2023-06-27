@@ -1,0 +1,42 @@
+\hypertarget{unnamed__pipe_8h}{}\doxysection{unnamed\+\_\+pipe.\+h File Reference}
+\label{unnamed__pipe_8h}\index{unnamed\_pipe.h@{unnamed\_pipe.h}}
+
+
+Module to demonstrate use of unnamed pipes for message passing.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{unnamed__pipe_8h_aa884fa587c022aeda8a9cd7554f6e7f4}{unnamed\+\_\+pipe}} (void)
+\begin{DoxyCompactList}\small\item\em Uses unnamed pipes for message passing between a parent and a child process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module to demonstrate use of unnamed pipes for message passing. 
+
+\begin{DoxyAuthor}{Author}
+Sudipto Ghosh 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{unnamed__pipe_8h_aa884fa587c022aeda8a9cd7554f6e7f4}\label{unnamed__pipe_8h_aa884fa587c022aeda8a9cd7554f6e7f4}} 
+\index{unnamed\_pipe.h@{unnamed\_pipe.h}!unnamed\_pipe@{unnamed\_pipe}}
+\index{unnamed\_pipe@{unnamed\_pipe}!unnamed\_pipe.h@{unnamed\_pipe.h}}
+\doxysubsubsection{\texorpdfstring{unnamed\_pipe()}{unnamed\_pipe()}}
+{\footnotesize\ttfamily int unnamed\+\_\+pipe (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Uses unnamed pipes for message passing between a parent and a child process. 
+
+It creates a pipe using the {\ttfamily pipe()} system call and forks a child process. The parent process writes to the pipe and the child process reads from it.
+
+The user is prompted to enter a message to write to the pipe. The user can exit the program by entering {\ttfamily \+:q} as the message.
+
+This function is invoked by the {\ttfamily pipe} command.
+
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure 
+\end{DoxyReturn}

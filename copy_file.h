@@ -8,12 +8,13 @@
  */
 
 /**
- * @brief Copies a regular file using the `read()` and `write()` system calls.
+ * @brief Copies a regular file using an unnamed pipe and the `read()` and
+ * `write()` system calls.
  *
  * It copies the content of the source file specified by `src` to the target
  * specified by the `dest` parameter.
  *
- * Usage: `copy_file("/tmp/passwd", "/tmp/passwd.oldbak", 0);`
+ * This function is invoked by the `copy` command.
  *
  * In case the target file already exists,
  * the user is prompted for confirmation and needs to pass the `-f` flag to

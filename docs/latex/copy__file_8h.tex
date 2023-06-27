@@ -1,0 +1,51 @@
+\hypertarget{copy__file_8h}{}\doxysection{copy\+\_\+file.\+h File Reference}
+\label{copy__file_8h}\index{copy\_file.h@{copy\_file.h}}
+
+
+Module to copy a file using system calls.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{copy__file_8h_ad28eaa2c4dc2e9b301bec6a5441ae3ec}{copy\+\_\+file}} (const char $\ast$, const char $\ast$, const int)
+\begin{DoxyCompactList}\small\item\em Copies a regular file using an unnamed pipe and the {\ttfamily read()} and {\ttfamily write()} system calls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module to copy a file using system calls. 
+
+\begin{DoxyAuthor}{Author}
+Sudipto Ghosh 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{copy__file_8h_ad28eaa2c4dc2e9b301bec6a5441ae3ec}\label{copy__file_8h_ad28eaa2c4dc2e9b301bec6a5441ae3ec}} 
+\index{copy\_file.h@{copy\_file.h}!copy\_file@{copy\_file}}
+\index{copy\_file@{copy\_file}!copy\_file.h@{copy\_file.h}}
+\doxysubsubsection{\texorpdfstring{copy\_file()}{copy\_file()}}
+{\footnotesize\ttfamily int copy\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{src,  }\item[{const char $\ast$}]{dest,  }\item[{const int}]{force\+\_\+flag }\end{DoxyParamCaption})}
+
+
+
+Copies a regular file using an unnamed pipe and the {\ttfamily read()} and {\ttfamily write()} system calls. 
+
+It copies the content of the source file specified by {\ttfamily src} to the target specified by the {\ttfamily dest} parameter.
+
+This function is invoked by the {\ttfamily copy} command.
+
+In case the target file already exists, the user is prompted for confirmation and needs to pass the {\ttfamily -\/f} flag to force this operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the absolute or relative path to the source file \\
+\hline
+{\em dest} & the absolute or relative path to the destination file \\
+\hline
+{\em force\+\_\+flag} & flag to force overwrite if the destination file exists \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure 
+\end{DoxyReturn}

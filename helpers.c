@@ -22,6 +22,10 @@ int parse_command(const char *command)
   {
     return 4;
   }
+  else if (strcmp(command, "info") == 0)
+  {
+    return 5;
+  }
   else
   {
     return -1;

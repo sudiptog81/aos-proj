@@ -1,0 +1,64 @@
+\hypertarget{stat__file_8h}{}\doxysection{stat\+\_\+file.\+h File Reference}
+\label{stat__file_8h}\index{stat\_file.h@{stat\_file.h}}
+
+
+Module to get statistical information about a file.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{stat__file_8h_a5f17bdb4d3c8c3c484ee7fd763f47862}{stat\+\_\+file}} (const char $\ast$)
+\begin{DoxyCompactList}\small\item\em Queries information about a file using {\ttfamily stat()} system call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module to get statistical information about a file. 
+
+\begin{DoxyAuthor}{Author}
+Sudipto Ghosh 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stat__file_8h_a5f17bdb4d3c8c3c484ee7fd763f47862}\label{stat__file_8h_a5f17bdb4d3c8c3c484ee7fd763f47862}} 
+\index{stat\_file.h@{stat\_file.h}!stat\_file@{stat\_file}}
+\index{stat\_file@{stat\_file}!stat\_file.h@{stat\_file.h}}
+\doxysubsubsection{\texorpdfstring{stat\_file()}{stat\_file()}}
+{\footnotesize\ttfamily int stat\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Queries information about a file using {\ttfamily stat()} system call. 
+
+It prints the following information about the file to the console\+:
+\begin{DoxyItemize}
+\item File type
+\item Device ID
+\item Major device ID
+\item Minor device ID
+\item File size (in bytes)
+\item Blocks allocated
+\item Filesystem block size
+\item Inode
+\item Links
+\item Owner permissions
+\item Group permissions
+\item Other permissions
+\item Owner user and UID
+\item Owner group and GID
+\item Last accessed
+\item Last modified
+\item Last changed
+\end{DoxyItemize}
+
+This function is invoked by the {\ttfamily info} command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the absolute or relative path of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure 
+\end{DoxyReturn}

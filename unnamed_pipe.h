@@ -16,6 +16,8 @@
  * The user is prompted to enter a message to write to the pipe. The user can exit the
  * program by entering `:q` as the message.
  *
+ * This function is invoked by the `pipe` command.
+ *
  * @return 0 on success, -1 on failure
  */
 int unnamed_pipe(void);

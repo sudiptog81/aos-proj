@@ -45,12 +45,44 @@ int copy_file(const char *src, const char *dest, const int force_flag)
     return -1;
   }
 
-  flush_buffer(buf);
+  int pipefd[2];
+  pipe(pipefd);
 
-  while (read(fd_src, buf, sizeof(buf)) > 0)
+  pid_t pid = fork();
+
+  if (pid > 0)
   {
-    write(fd_dest, buf, strlen(buf));
+    // parent process
+    close(pipefd[0]);
     flush_buffer(buf);
+
+    while ((n = read(fd_src, buf, 1024)) > 0)
+    {
+      write(pipefd[1], buf, n);
+      flush_buffer(buf);
+    }
+
+    close(pipefd[1]);
+  }
+  else if (pid == 0)
+  {
+    // child process
+    close(pipefd[1]);
+    flush_buffer(buf);
+
+    while ((n = read(pipefd[0], buf, 1024)) > 0)
+    {
+      write(fd_dest, buf, n);
+      flush_buffer(buf);
+    }
+
+    close(pipefd[0]);
+    exit(0);
+  }
+  else
+  {
+    printf("Error forking process\n");
+    return -1;
   }
 
   close(fd_src);
