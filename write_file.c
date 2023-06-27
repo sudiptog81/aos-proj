@@ -42,16 +42,16 @@ int write_file(const char *path, const int offset, const int nBytes, const int f
     return -1;
   }
 
-  // move file pointer to offset
-  if (offset > 0)
+  // seek to offset and handle errors
+  if (lseek(fd, offset, SEEK_SET) < 0)
   {
-    lseek(fd, offset, SEEK_SET);
+    printf("Error seeking to offset\n");
+    return -1;
   }
-
-  printf("type :w to exit\n---------------\n");
 
   if (nBytes < 0)
   {
+    printf("type :w to exit\n---------------\n");
     while (1)
     {
       // allocate memory for string

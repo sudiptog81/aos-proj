@@ -101,6 +101,7 @@ Commands</h1>
 <div class="line">  pipe: create a pipe and simulate communication between processes</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
 Usage</h1>
+<p>Each command has its own set of options and arguments. The usage of each commmand can be known by executing <code>./main [command]</code>. The details of each command are given below.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Creating Files</h2>
 <p>The <code>create</code> command should be used to create a file or a named pipe. The permissions of the file or named pipe have to be specified after the path as an octal number. The <code>-p</code> flag can be used to create a named pipe.</p>
@@ -118,28 +119,32 @@ Reading Files</h2>
 Example: Reading a File</h3>
 <div class="fragment"><div class="line">$ ./main read file.txt</div>
 <div class="line">lorem ipsum dolor amet</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md9"></a>
+Example: Reading a File (With Offset and Number of Bytes)</h3>
+<div class="fragment"><div class="line">$ ./main read file.txt -o 6 -n 5</div>
+<div class="line">ipsum</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
 Writing to Files</h2>
 <p>The <code>write</code> command should be used to write to a file from <code>stdin</code> - the console or a shell pipe. The <code>-o</code> flag can be used to specify the offset from which the file should be written to. The <code>-n</code> flag can be used to specify the number of bytes to be written to the file. If the <code>-n</code> flag is not used, the entire file will be written to. If the <code>-o</code> flag is not used, the file will be written to from the beginning.</p>
 <p>The user is prompted with a message to enter the text to be written to the file. The user can enter the contents of the file. To end the input, the user has to type <code>:w</code> followed by the <code>Enter</code> key.</p>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<h3><a class="anchor" id="autotoc_md11"></a>
 Example: Writing to a File</h3>
 <div class="fragment"><div class="line">$ ./main write file.txt</div>
 <div class="line">type :w to exit</div>
 <div class="line">---------------</div>
 <div class="line">lorem ipsum dolor amet</div>
 <div class="line">:w</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
 Copying Files</h2>
 <p>The <code>copy</code> command should be used to copy the contents of one file to another using an unnamed pipe. If the destination file exists, the program will force the user to pass the <code>-f</code> flag to overwrite it.</p>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<h3><a class="anchor" id="autotoc_md13"></a>
 Example: Copying a File</h3>
 <div class="fragment"><div class="line">$ ./main copy file.txt file2.txt</div>
 <div class="line">Copied file.txt to file2.txt...</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
 File Information</h2>
 <p>The <code>info</code> command should be used to display statistical information about a file. The information displayed includes the file type, permissions, number of hard links, owner, group, size, block size, number of blocks, last access time, last modification time, and last status change time.</p>
-<h3><a class="anchor" id="autotoc_md14"></a>
+<h3><a class="anchor" id="autotoc_md15"></a>
 Example: Displaying File Information (Regular File)</h3>
 <div class="fragment"><div class="line">$ ./main info a.txt</div>
 <div class="line">File: a.txt</div>
@@ -160,7 +165,7 @@ Example: Displaying File Information (Regular File)</h3>
 <div class="line">Last Accessed: Tue Jun 27 11:16:42 2023</div>
 <div class="line">Last Modified: Tue Jun 27 15:04:14 2023</div>
 <div class="line">Last Changed: Tue Jun 27 15:04:14 2023</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md15"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md16"></a>
 Example: Displaying File Information (Special File)</h3>
 <div class="fragment"><div class="line">$ ./main info /dev/nvme0n1p1</div>
 <div class="line">File: /dev/nvme0n1p1</div>
@@ -181,10 +186,10 @@ Example: Displaying File Information (Special File)</h3>
 <div class="line">Last Accessed: Sun Jun 25 08:18:52 2023</div>
 <div class="line">Last Modified: Sun Jun 25 08:18:06 2023</div>
 <div class="line">Last Changed: Sun Jun 25 08:18:06 2023</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md16"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
 Pipes</h2>
 <p>The <code>pipe</code> command should be used to create a pipe and simulate communication between two processes. This program can demonstrate this using both unnamed as well as named pipes.</p>
-<h3><a class="anchor" id="autotoc_md17"></a>
+<h3><a class="anchor" id="autotoc_md18"></a>
 Unnamed Pipes</h3>
 <p>If used without arguments, it creates an unnamed pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter the contents of the pipe. To end the input, the user has to type <code>:q</code> followed by the <code>Enter</code> key. Internally, the program forks a child process and the parent process writes to the pipe and the child process reads it from the pipe and prints the contents to <code>stdout</code>.</p>
 <div class="fragment"><div class="line">$ ./main pipe         </div>
@@ -194,7 +199,7 @@ Unnamed Pipes</h3>
 <div class="line">Received from Parent: Hello</div>
 <div class="line">Message: :q</div>
 <div class="line">Received Bye from Parent...</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md19"></a>
 Named Pipes</h3>
 <p>If used with the <code>-p</code> flag, it uses a named pipe in the mode specified by the argument after the path of the pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter some text and press <code>Enter</code> to send the message. To end the input, the user has to type <code>:q</code> followed by the <code>Enter</code> key.</p>
 <p>Multiple instances of the program have to be run to demonstrate communication between processes. In case multiple readers are waiting for a writer, the first reader to read from the pipe will receive the message and the rest will receive an empty string. This is because the message is removed from the pipe after it is read. Which reader receives the message is determined by the operating system scheduler.</p>
@@ -210,7 +215,7 @@ Named Pipes</h3>
 <div class="line">Waiting for writer...</div>
 <div class="line">Received: Hello World</div>
 <div class="line">Received Bye...</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md19"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
 Author</h1>
 <p>Sudipto Ghosh (51)<br  />
  Department of Computer Science<br  />

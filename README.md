@@ -36,6 +36,8 @@ Commands:
 
 ## Usage
 
+Each command has its own set of options and arguments. The usage of each commmand can be known by executing `./main [command]`. The details of each command are given below.
+
 ### Creating Files
 
 The `create` command should be used to create a file or a named pipe. The permissions of the file or named pipe have to be specified after the path as an octal number. The `-p` flag can be used to create a named pipe.
@@ -63,6 +65,13 @@ The `read` command should be used to read a file and print its contents to `stdo
 ```bash
 $ ./main read file.txt
 lorem ipsum dolor amet
+```
+
+#### Example: Reading a File (With Offset and Number of Bytes)
+
+```bash
+$ ./main read file.txt -o 6 -n 5
+ipsum
 ```
 
 ### Writing to Files

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.14)  27 JUN 2023 20:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.14)  27 JUN 2023 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1068,13 +1068,13 @@ Underfull \hbox (badness 10000) detected at line 51
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 5030636BFF34BA36D77DB37C04E7EEB1;14071.
+(rerunfilecheck)             Checksum: 0631393000222054A34B61BD95F41C2C;14504.
  ) 
 Here is how much of TeX's memory you used:
- 18367 strings out of 476025
- 295241 string characters out of 5796532
+ 18371 strings out of 476025
+ 295323 string characters out of 5796532
  1868388 words of memory out of 5000000
- 38264 multiletter control sequences out of 15000+600000
+ 38266 multiletter control sequences out of 15000+600000
  570636 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,16n,117p,658b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1085,10 +1085,10 @@ urier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></u
 sr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/hel
 vetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (25 pages, 140065 bytes).
+Output written on refman.pdf (25 pages, 140948 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
- 680 compressed objects within 7 object streams
- 169 named destinations out of 1000 (max. 500000)
- 593 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 738 PDF objects out of 1000 (max. 8388607)
+ 686 compressed objects within 7 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 601 words of extra memory for PDF output out of 10000 (max. 10000000)
 

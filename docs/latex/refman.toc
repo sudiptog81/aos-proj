@@ -8,14 +8,15 @@
 \contentsline {subsubsection}{\numberline {1.3.1.2}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Creating a Named Pipe}{2}{subsubsection.1.3.1.2}%
 \contentsline {subsection}{\numberline {1.3.2}Reading Files}{2}{subsection.1.3.2}%
 \contentsline {subsubsection}{\numberline {1.3.2.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Reading a File}{2}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Reading a File (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}With Offset and Number of Bytes)}{2}{subsubsection.1.3.2.2}%
 \contentsline {subsection}{\numberline {1.3.3}Writing to Files}{2}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Writing to a File}{2}{subsubsection.1.3.3.1}%
-\contentsline {subsection}{\numberline {1.3.4}Copying Files}{2}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Writing to a File}{3}{subsubsection.1.3.3.1}%
+\contentsline {subsection}{\numberline {1.3.4}Copying Files}{3}{subsection.1.3.4}%
 \contentsline {subsubsection}{\numberline {1.3.4.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Copying a File}{3}{subsubsection.1.3.4.1}%
 \contentsline {subsection}{\numberline {1.3.5}File Information}{3}{subsection.1.3.5}%
 \contentsline {subsubsection}{\numberline {1.3.5.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Displaying File Information (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Regular File)}{3}{subsubsection.1.3.5.1}%
 \contentsline {subsubsection}{\numberline {1.3.5.2}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Displaying File Information (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Special File)}{3}{subsubsection.1.3.5.2}%
-\contentsline {subsection}{\numberline {1.3.6}Pipes}{3}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {1.3.6}Pipes}{4}{subsection.1.3.6}%
 \contentsline {subsubsection}{\numberline {1.3.6.1}Unnamed Pipes}{4}{subsubsection.1.3.6.1}%
 \contentsline {subsubsection}{\numberline {1.3.6.2}Named Pipes}{4}{subsubsection.1.3.6.2}%
 \contentsline {section}{\numberline {1.4}Author}{4}{section.1.4}%
