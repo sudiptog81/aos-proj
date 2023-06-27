@@ -16,6 +16,7 @@ int copy_file(const char *src, const char *dest, const int force_flag)
 
   if (force_flag == 0)
   {
+    // check if destination file already exists
     fd_dest = open(dest, O_RDONLY);
     if (fd_dest > -1)
     {
@@ -26,8 +27,10 @@ int copy_file(const char *src, const char *dest, const int force_flag)
     close(fd_dest);
   }
 
+  // open source file
   fd_src = open(src, O_RDONLY);
 
+  // handle error opening source file
   if (fd_src < 0)
   {
     printf("Error opening source file\n");
@@ -37,25 +40,29 @@ int copy_file(const char *src, const char *dest, const int force_flag)
   struct stat src_stat;
   stat(src, &src_stat);
 
+  // open destination file in the same mode as source file
   fd_dest = open(dest, O_WRONLY | O_TRUNC | O_CREAT, src_stat.st_mode);
 
+  // handle error opening destination file
   if (fd_dest < 0)
   {
     printf("Error opening destination file\n");
     return -1;
   }
 
+  // create pipe
   int pipefd[2];
   pipe(pipefd);
 
+  // fork process
   pid_t pid = fork();
 
-  if (pid > 0)
+  if (pid > 0) // parent process
   {
-    // parent process
     close(pipefd[0]);
     flush_buffer(buf);
 
+    // read from source file and write to pipe
     while ((n = read(fd_src, buf, 1024)) > 0)
     {
       write(pipefd[1], buf, n);
@@ -64,12 +71,12 @@ int copy_file(const char *src, const char *dest, const int force_flag)
 
     close(pipefd[1]);
   }
-  else if (pid == 0)
+  else if (pid == 0) // child process
   {
-    // child process
     close(pipefd[1]);
     flush_buffer(buf);
 
+    // read from pipe and write to destination file
     while ((n = read(pipefd[0], buf, 1024)) > 0)
     {
       write(fd_dest, buf, n);
@@ -85,6 +92,7 @@ int copy_file(const char *src, const char *dest, const int force_flag)
     return -1;
   }
 
+  // close files
   close(fd_src);
   close(fd_dest);
 

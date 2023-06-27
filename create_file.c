@@ -16,6 +16,7 @@ int create_file(const char *path, const int perms, const int pipe_flag, const in
 
   if (force_flag == 0)
   {
+    // check if file already exists
     fd = open(path, O_RDONLY);
     if (fd != -1)
     {
@@ -25,11 +26,13 @@ int create_file(const char *path, const int perms, const int pipe_flag, const in
     }
   }
 
+  // set umask to 0 to ensure that the file is created with the permissions specified
   umask(0);
 
-  if (!pipe_flag)
+  if (!pipe_flag) // create regular file
   {
     fd = creat(path, perms);
+
     if (fd < 0)
     {
       printf("Error creating file\n");
@@ -38,9 +41,9 @@ int create_file(const char *path, const int perms, const int pipe_flag, const in
 
     fd = open(path, O_WRONLY);
   }
-  else
+  else // create named pipe
   {
-    fd = mknod(path, __S_IFIFO | S_IRWXU, 0);
+    fd = mknod(path, __S_IFIFO | perms, 0);
 
     if (fd < 0)
     {

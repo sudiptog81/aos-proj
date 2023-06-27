@@ -17,7 +17,7 @@ int named_pipe(const char *path, const int read_flag)
   char *string;
   size_t len = 1024;
 
-  if (read_flag == 0)
+  if (read_flag == 0) // open named pipe for writing
   {
     fd = open(path, O_WRONLY);
 
@@ -29,6 +29,7 @@ int named_pipe(const char *path, const int read_flag)
 
     printf("type :q to exit\n----------------\n");
 
+    // read from stdin and write to named pipe until :q is entered
     while (1)
     {
       printf("Message: ");
@@ -50,7 +51,7 @@ int named_pipe(const char *path, const int read_flag)
     free(string);
     close(fd);
   }
-  else
+  else // open named pipe for reading
   {
     fd = open(path, O_RDONLY);
 
@@ -62,6 +63,7 @@ int named_pipe(const char *path, const int read_flag)
 
     printf("Waiting for writer...\n");
 
+    // read from named pipe until :q is received
     while (1)
     {
       flush_buffer(buf);

@@ -14,6 +14,7 @@
 
 int stat_file(const char *path)
 {
+  // get file information and store in _stat
   struct stat _stat;
   int s = stat(path, &_stat);
 
@@ -26,6 +27,7 @@ int stat_file(const char *path)
   // file information
   printf("File: %s\n", path);
 
+  // file type
   printf("Type: ");
   switch (_stat.st_mode & __S_IFMT)
   {
@@ -55,10 +57,12 @@ int stat_file(const char *path)
     break;
   }
 
+  // device information
   printf("Device: %ld\n", _stat.st_dev);
   printf("Major Device: %ld\n", (long)major(_stat.st_dev));
   printf("Minor Device: %ld\n", (long)minor(_stat.st_dev));
 
+  // statistical information
   printf("Size: %ld\n", _stat.st_size);
   printf("Blocks Allocated (in 512B units): %ld\n", _stat.st_blocks);
   printf("Filesystem Block Size: %ld\n", _stat.st_blksize);
@@ -88,7 +92,7 @@ int stat_file(const char *path)
   printf("Owner User: %s (UID: %d)\n", getpwuid(_stat.st_uid)->pw_name, _stat.st_uid);
   printf("Owner Group: %s  (GID: %d)\n", getgrgid(_stat.st_gid)->gr_name, _stat.st_gid);
 
-  // time information
+  // timestamps
   printf("Last Accessed: %s", ctime(&_stat.st_atime));
   printf("Last Modified: %s", ctime(&_stat.st_mtime));
   printf("Last Changed: %s", ctime(&_stat.st_ctime));

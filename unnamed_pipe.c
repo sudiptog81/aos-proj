@@ -17,24 +17,27 @@ int unnamed_pipe(void)
   char *string;
   size_t len = 1024;
 
+  // create unnamed pipe
   if (pipe(fd) < 0)
   {
     printf("Error creating pipe\n");
     return -1;
   }
 
+  // fork process
   if ((pid = fork()) < 0)
   {
     printf("Error forking\n");
     return -1;
   }
 
-  if (pid > 0)
+  if (pid > 0) // parent process
   {
     close(fd[0]);
 
     printf("type :q to exit\n----------------\n");
 
+    // read from stdin and write to pipe until :q is entered
     while (1)
     {
       printf("Message: ");
@@ -57,10 +60,11 @@ int unnamed_pipe(void)
     free(string);
     close(fd[1]);
   }
-  else if (pid == 0)
+  else if (pid == 0) // child process
   {
     close(fd[1]);
 
+    // read from pipe until :q is received
     while (1)
     {
       flush_buffer(buf);
