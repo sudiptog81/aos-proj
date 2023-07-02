@@ -67,26 +67,38 @@ The {\ttfamily read} command should be used to read a file and print its content
 \hypertarget{index_autotoc_md10}{}\doxysubsection{Writing to Files}\label{index_autotoc_md10}
 The {\ttfamily write} command should be used to write to a file from {\ttfamily stdin} -\/ the console or a shell pipe. The {\ttfamily -\/o} flag can be used to specify the offset from which the file should be written to. The {\ttfamily -\/n} flag can be used to specify the number of bytes to be written to the file. If the {\ttfamily -\/n} flag is not used, the entire file will be written to. If the {\ttfamily -\/o} flag is not used, the file will be written to from the beginning.
 
-The user is prompted with a message to enter the text to be written to the file. The user can enter the contents of the file. To end the input, the user has to type {\ttfamily \+:w} followed by the {\ttfamily Enter} key.\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Example\+: Writing to a File}\label{index_autotoc_md11}
+The user is prompted with a message to enter the text to be written to the file. The user can enter the contents of the file. To end the input, the user has to type {\ttfamily \+:w} followed by the {\ttfamily Enter} key.
+
+In order to append to a file, the {\ttfamily -\/a} flag can be used. This will append the contents to the end of the file. This can also be used with the {\ttfamily -\/o} flag to append to a file from a specific offset after the end of the file. This option should not be used with the {\ttfamily -\/f} flag.\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Example\+: Writing to a File}\label{index_autotoc_md11}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$\ ./main\ write\ file.txt}
 \DoxyCodeLine{type\ :w\ to\ exit}
 \DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
-\DoxyCodeLine{lorem\ ipsum\ dolor\ amet}
+\DoxyCodeLine{lorem\ ipsum}
 \DoxyCodeLine{:w}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md12}{}\doxysubsection{Copying Files}\label{index_autotoc_md12}
-The {\ttfamily copy} command should be used to copy the contents of one file to another using an unnamed pipe. If the destination file exists, the program will force the user to pass the {\ttfamily -\/f} flag to overwrite it.\hypertarget{index_autotoc_md13}{}\doxysubsubsection{Example\+: Copying a File}\label{index_autotoc_md13}
+\hypertarget{index_autotoc_md12}{}\doxysubsubsection{Example\+: Appending to a Fileipsum}\label{index_autotoc_md12}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ ./main\ write\ -\/a\ file.txt}
+\DoxyCodeLine{type\ :w\ to\ exit}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{dolor\ amet}
+\DoxyCodeLine{:w}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md13}{}\doxysubsection{Copying Files}\label{index_autotoc_md13}
+The {\ttfamily copy} command should be used to copy the contents of one file to another using an unnamed pipe. If the destination file exists, the program will force the user to pass the {\ttfamily -\/f} flag to overwrite it.\hypertarget{index_autotoc_md14}{}\doxysubsubsection{Example\+: Copying a File}\label{index_autotoc_md14}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$\ ./main\ copy\ file.txt\ file2.txt}
 \DoxyCodeLine{Copied\ file.txt\ to\ file2.txt...}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md14}{}\doxysubsection{File Information}\label{index_autotoc_md14}
-The {\ttfamily info} command should be used to display statistical information about a file. The information displayed includes the file type, permissions, number of hard links, owner, group, size, block size, number of blocks, last access time, last modification time, and last status change time.\hypertarget{index_autotoc_md15}{}\doxysubsubsection{Example\+: Displaying File Information (\+Regular File)}\label{index_autotoc_md15}
+\hypertarget{index_autotoc_md15}{}\doxysubsection{File Information}\label{index_autotoc_md15}
+The {\ttfamily info} command should be used to display statistical information about a file. The information displayed includes the file type, permissions, number of hard links, owner, group, size, block size, number of blocks, last access time, last modification time, and last status change time.\hypertarget{index_autotoc_md16}{}\doxysubsubsection{Example\+: Displaying File Information (\+Regular File)}\label{index_autotoc_md16}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$\ ./main\ info\ a.txt}
@@ -110,7 +122,7 @@ The {\ttfamily info} command should be used to display statistical information a
 \DoxyCodeLine{Last\ Changed:\ Tue\ Jun\ 27\ 15:04:14\ 2023}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md16}{}\doxysubsubsection{Example\+: Displaying File Information (\+Special File)}\label{index_autotoc_md16}
+\hypertarget{index_autotoc_md17}{}\doxysubsubsection{Example\+: Displaying File Information (\+Special File)}\label{index_autotoc_md17}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$\ ./main\ info\ /dev/nvme0n1p1}
@@ -134,8 +146,8 @@ The {\ttfamily info} command should be used to display statistical information a
 \DoxyCodeLine{Last\ Changed:\ Sun\ Jun\ 25\ 08:18:06\ 2023}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md17}{}\doxysubsection{Pipes}\label{index_autotoc_md17}
-The {\ttfamily pipe} command should be used to create a pipe and simulate communication between two processes. This program can demonstrate this using both unnamed as well as named pipes.\hypertarget{index_autotoc_md18}{}\doxysubsubsection{Unnamed Pipes}\label{index_autotoc_md18}
+\hypertarget{index_autotoc_md18}{}\doxysubsection{Pipes}\label{index_autotoc_md18}
+The {\ttfamily pipe} command should be used to create a pipe and simulate communication between two processes. This program can demonstrate this using both unnamed as well as named pipes.\hypertarget{index_autotoc_md19}{}\doxysubsubsection{Unnamed Pipes}\label{index_autotoc_md19}
 If used with {\ttfamily -\/u} flag, it creates an unnamed pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter the contents of the pipe. To end the input, the user has to type {\ttfamily \+:q} followed by the {\ttfamily Enter} key. Internally, the program forks a child process and the parent process writes to the pipe and the child process reads it from the pipe and prints the contents to {\ttfamily stdout}.
 
 
@@ -149,10 +161,10 @@ If used with {\ttfamily -\/u} flag, it creates an unnamed pipe. The user is prom
 \DoxyCodeLine{Received\ Bye\ from\ Parent...}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md19}{}\doxysubsubsection{Named Pipes}\label{index_autotoc_md19}
+\hypertarget{index_autotoc_md20}{}\doxysubsubsection{Named Pipes}\label{index_autotoc_md20}
 If a path is specified, it uses a named pipe in the mode (reader or writer) specified by the argument after the path of the pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter some text and press {\ttfamily Enter} to send the message. To end the input, the user has to type {\ttfamily \+:q} followed by the {\ttfamily Enter} key. If the pipe already exists, the program will force the user to pass the {\ttfamily -\/f} flag to overwrite it, otherwise, it will attempt to use the existing pipe.
 
-Multiple instances of the program have to be run to demonstrate communication between processes. In case multiple readers are waiting for a writer, the first reader to read from the pipe will receive the message and the rest will receive an empty string. This is because the message is removed from the pipe after it is read. Which reader receives the message is determined by the operating system scheduler.
+Multiple instances of the program have to be run on different terminals to demonstrate communication between processes. In case multiple readers are waiting for a writer, the first reader to read from the pipe will receive the message and the rest will receive an empty string. This is because the message is removed from the pipe after it is read. Which reader receives the message is determined by the operating system scheduler.
 
 
 \begin{DoxyCode}{0}
@@ -170,7 +182,7 @@ Multiple instances of the program have to be run to demonstrate communication be
 \DoxyCodeLine{Received\ Bye...}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md20}{}\doxysection{Author}\label{index_autotoc_md20}
+\hypertarget{index_autotoc_md21}{}\doxysection{Author}\label{index_autotoc_md21}
 Sudipto Ghosh (51)~\newline
  Department of Computer Science~\newline
  University of Delhi 

@@ -41,7 +41,7 @@ int parse_perms(const char *permissions)
     perms = perms * 8 + (permissions[i] - '0');
   }
 
-  if (perms > 0777)
+  if (perms < 0 || perms > 0777)
   {
     printf("Invalid permissions\n");
     return -1;

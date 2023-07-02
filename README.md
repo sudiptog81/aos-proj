@@ -82,13 +82,25 @@ The `write` command should be used to write to a file from `stdin` - the console
 
 The user is prompted with a message to enter the text to be written to the file. The user can enter the contents of the file. To end the input, the user has to type `:w` followed by the `Enter` key.
 
+In order to append to a file, the `-a` flag can be used. This will append the contents to the end of the file. This can also be used with the `-o` flag to append to a file from a specific offset after the end of the file. This option should not be used with the `-f` flag.
+
 #### Example: Writing to a File
 
 ```bash
 $ ./main write file.txt
 type :w to exit
 ---------------
-lorem ipsum dolor amet
+lorem ipsum
+:w
+```
+
+#### Example: Appending to a Fileipsum
+
+```bash
+$ ./main write -a file.txt
+type :w to exit
+---------------
+dolor amet
 :w
 ```
 
@@ -177,7 +189,7 @@ Received Bye from Parent...
 
 If a path is specified, it uses a named pipe in the mode (reader or writer) specified by the argument after the path of the pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter some text and press `Enter` to send the message. To end the input, the user has to type `:q` followed by the `Enter` key. If the pipe already exists, the program will force the user to pass the `-f` flag to overwrite it, otherwise, it will attempt to use the existing pipe.
 
-Multiple instances of the program have to be run to demonstrate communication between processes. In case multiple readers are waiting for a writer, the first reader to read from the pipe will receive the message and the rest will receive an empty string. This is because the message is removed from the pipe after it is read. Which reader receives the message is determined by the operating system scheduler.
+Multiple instances of the program have to be run on different terminals to demonstrate communication between processes. In case multiple readers are waiting for a writer, the first reader to read from the pipe will receive the message and the rest will receive an empty string. This is because the message is removed from the pipe after it is read. Which reader receives the message is determined by the operating system scheduler.
 
 ```bash
 # writer process

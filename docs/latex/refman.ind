@@ -1,71 +1,71 @@
 \begin{theindex}
 
   \item {copy\_file}
-    \subitem {copy\_file.h}, \hyperpage{7}
-  \item {copy\_file.h}, \hyperpage{7}
-    \subitem {copy\_file}, \hyperpage{7}
+    \subitem {copy\_file.h}, \hyperpage{9}
+  \item {copy\_file.h}, \hyperpage{9}
+    \subitem {copy\_file}, \hyperpage{9}
   \item {create\_file}
-    \subitem {create\_file.h}, \hyperpage{8}
-  \item {create\_file.h}, \hyperpage{8}
-    \subitem {create\_file}, \hyperpage{8}
+    \subitem {create\_file.h}, \hyperpage{10}
+  \item {create\_file.h}, \hyperpage{10}
+    \subitem {create\_file}, \hyperpage{10}
 
   \indexspace
 
   \item {flush\_buffer}
-    \subitem {helpers.h}, \hyperpage{10}
+    \subitem {helpers.h}, \hyperpage{12}
 
   \indexspace
 
-  \item {helpers.h}, \hyperpage{9}
-    \subitem {flush\_buffer}, \hyperpage{10}
-    \subitem {parse\_command}, \hyperpage{10}
-    \subitem {parse\_perms}, \hyperpage{10}
+  \item {helpers.h}, \hyperpage{11}
+    \subitem {flush\_buffer}, \hyperpage{12}
+    \subitem {parse\_command}, \hyperpage{12}
+    \subitem {parse\_perms}, \hyperpage{12}
 
   \indexspace
 
   \item {named\_pipe}
-    \subitem {named\_pipe.h}, \hyperpage{11}
-  \item {named\_pipe.h}, \hyperpage{11}
-    \subitem {named\_pipe}, \hyperpage{11}
+    \subitem {named\_pipe.h}, \hyperpage{13}
+  \item {named\_pipe.h}, \hyperpage{13}
+    \subitem {named\_pipe}, \hyperpage{13}
 
   \indexspace
 
   \item {parse\_command}
-    \subitem {helpers.h}, \hyperpage{10}
+    \subitem {helpers.h}, \hyperpage{12}
   \item {parse\_perms}
-    \subitem {helpers.h}, \hyperpage{10}
+    \subitem {helpers.h}, \hyperpage{12}
   \item {print\_usage\_command}
-    \subitem {usage.h}, \hyperpage{17}
+    \subitem {usage.h}, \hyperpage{19}
 
   \indexspace
 
   \item {read\_file}
-    \subitem {read\_file.h}, \hyperpage{13}
-  \item {read\_file.h}, \hyperpage{12}
-    \subitem {read\_file}, \hyperpage{13}
+    \subitem {read\_file.h}, \hyperpage{15}
+  \item {read\_file.h}, \hyperpage{14}
+    \subitem {read\_file}, \hyperpage{15}
 
   \indexspace
 
   \item {stat\_file}
-    \subitem {stat\_file.h}, \hyperpage{14}
-  \item {stat\_file.h}, \hyperpage{13}
-    \subitem {stat\_file}, \hyperpage{14}
-  \item {syscalls.h}, \hyperpage{15}
+    \subitem {stat\_file.h}, \hyperpage{16}
+  \item {stat\_file.h}, \hyperpage{15}
+    \subitem {stat\_file}, \hyperpage{16}
+  \item {syscalls.h}, \hyperpage{17}
 
   \indexspace
 
   \item {unnamed\_pipe}
-    \subitem {unnamed\_pipe.h}, \hyperpage{16}
-  \item {unnamed\_pipe.h}, \hyperpage{16}
-    \subitem {unnamed\_pipe}, \hyperpage{16}
-  \item {usage.h}, \hyperpage{17}
-    \subitem {print\_usage\_command}, \hyperpage{17}
+    \subitem {unnamed\_pipe.h}, \hyperpage{18}
+  \item {unnamed\_pipe.h}, \hyperpage{18}
+    \subitem {unnamed\_pipe}, \hyperpage{18}
+  \item {usage.h}, \hyperpage{19}
+    \subitem {print\_usage\_command}, \hyperpage{19}
 
   \indexspace
 
   \item {write\_file}
-    \subitem {write\_file.h}, \hyperpage{18}
-  \item {write\_file.h}, \hyperpage{18}
-    \subitem {write\_file}, \hyperpage{18}
+    \subitem {write\_file.h}, \hyperpage{20}
+  \item {write\_file.h}, \hyperpage{20}
+    \subitem {write\_file}, \hyperpage{20}
 
 \end{theindex}

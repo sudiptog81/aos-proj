@@ -8,14 +8,15 @@
 
 #include "helpers.h"
 
-int write_file(const char *path, const int offset, const int nBytes, const int force_flag)
+int write_file(const char *path, const int offset, const int nBytes,
+               const int append_flag, const int force_flag)
 {
   int n, fd;
   char *string;
   size_t len = BUFSIZE;
 
   // check if file exists when -f is not used
-  if (force_flag == 0)
+  if (force_flag == 0 && append_flag == 0)
   {
     fd = open(path, O_WRONLY);
     if (fd > -1)
@@ -29,10 +30,15 @@ int write_file(const char *path, const int offset, const int nBytes, const int f
       fd = open(path, O_WRONLY | O_CREAT, 0644);
     }
   }
-  // create file if it doesn't exist when -f is used
-  else
+  // truncate file when -f is used
+  else if (force_flag == 1 && append_flag == 0)
   {
     fd = open(path, O_WRONLY | O_TRUNC, 0);
+  }
+  // open file for appending
+  else if (append_flag == 1)
+  {
+    fd = open(path, O_WRONLY, 0);
   }
 
   // handle errors in opening file
@@ -42,8 +48,20 @@ int write_file(const char *path, const int offset, const int nBytes, const int f
     return -1;
   }
 
+  // if append go to end of file
+  if (append_flag == 1)
+  {
+    if (lseek(fd, 0 ? offset == 0 : offset, SEEK_END) < 0)
+    {
+      printf("Error seeking to end of file\n");
+      return -1;
+    }
+  }
+
+  printf("current offset: %ld\n", lseek(fd, 0, SEEK_CUR));
+
   // seek to offset and handle errors
-  if (lseek(fd, offset, SEEK_SET) < 0)
+  if (lseek(fd, offset, SEEK_CUR) < 0)
   {
     printf("Error seeking to offset\n");
     return -1;

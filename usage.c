@@ -34,9 +34,10 @@ void print_usage_command(char *command)
   }
   else if (strcmp(command, "write") == 0)
   {
-    printf("Usage: ./main write [-f] file [-o offset] [-n nBytes]\n");
+    printf("Usage: ./main write [-f] [-a] file [-o offset] [-n nBytes]\n");
     printf("  file: the file to write to\n");
-    printf("  -f: force write\n");
+    printf("  -f: force write (do not use with -a)\n");
+    printf("  -a: append to the file (do not use with -f)\n");
     printf("  -o offset: specifies the offset from where to start writing\n");
     printf("  -n nBytes: specifies the number of bytes to write to the file\n");
     return;

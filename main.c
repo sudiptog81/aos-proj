@@ -51,43 +51,60 @@ int main(int argc, char **argv)
       return -1;
     }
 
-    if (argc == 4 && strcmp(argv[2], "-f") != 0)
+    if (argc == 4 && strcmp(argv[2], "-f") != 0 && strcmp(argv[2], "-a") != 0)
     {
       print_usage_command("write");
       return -1;
     }
 
-    if (argc == 3 && write_file(argv[2], 0, -1, 0) == -1)
+    if (argc == 3)
     {
-      return -1;
+      return write_file(argv[2], 0, -1, 0, 0);
     }
-    else if (argc == 4 && write_file(argv[3], 0, -1, 1) == -1)
+    else if (argc == 4 && strcmp(argv[2], "-f") == 0)
     {
-      return -1;
+      return write_file(argv[3], 0, -1, 0, 1);
     }
-    else if (argc == 5 && strcmp(argv[3], "-o") == 0 && write_file(argv[2], atoi(argv[4]), -1, 0) == -1)
+    else if (argc == 4 && strcmp(argv[2], "-a") == 0)
     {
-      return -1;
+      return write_file(argv[3], 0, -1, 1, 1);
     }
-    else if (argc == 5 && strcmp(argv[3], "-n") == 0 && write_file(argv[2], 0, atoi(argv[4]), 0) == -1)
+    else if (argc == 5 && strcmp(argv[3], "-o") == 0)
     {
-      return -1;
+      return write_file(argv[2], atoi(argv[4]), -1, 0, 0);
     }
-    else if (argc == 6 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "-o") == 0 && write_file(argv[3], atoi(argv[5]), -1, 1) == -1)
+    else if (argc == 5 && strcmp(argv[3], "-n") == 0)
     {
-      return -1;
+      return write_file(argv[2], 0, atoi(argv[4]), 0, 0);
     }
-    else if (argc == 6 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "-n") == 0 && write_file(argv[3], 0, atoi(argv[5]), 1) == -1)
+    else if (argc == 6 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "-o") == 0)
     {
-      return -1;
+      return write_file(argv[3], atoi(argv[5]), -1, 0, 1);
     }
-    else if (argc == 7 && strcmp(argv[3], "-o") == 0 && strcmp(argv[5], "-n") == 0 && write_file(argv[2], atoi(argv[4]), atoi(argv[6]), 0) == -1)
+    else if (argc == 6 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "-n") == 0)
     {
-      return -1;
+      return write_file(argv[3], 0, atoi(argv[5]), 0, 1);
     }
-    else if (argc == 8 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "-o") == 0 && strcmp(argv[6], "-n") == 0 && write_file(argv[3], atoi(argv[5]), atoi(argv[7]), 1) == -1)
+    else if (argc == 6 && strcmp(argv[2], "-a") == 0 && strcmp(argv[4], "-o") == 0)
     {
-      return -1;
+      return write_file(argv[3], atoi(argv[5]), -1, 1, 0);
+    }
+    else if (argc == 6 && strcmp(argv[2], "-a") == 0 && strcmp(argv[4], "-n") == 0)
+    {
+      printf("here\n");
+      return write_file(argv[3], 0, atoi(argv[5]), 1, 0);
+    }
+    else if (argc == 7 && strcmp(argv[3], "-o") == 0 && strcmp(argv[5], "-n") == 0)
+    {
+      return write_file(argv[2], atoi(argv[4]), atoi(argv[6]), 0, 0);
+    }
+    else if (argc == 8 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "-o") == 0 && strcmp(argv[6], "-n") == 0)
+    {
+      return write_file(argv[3], atoi(argv[5]), atoi(argv[7]), 0, 1);
+    }
+    else if (argc == 8 && strcmp(argv[2], "-a") == 0 && strcmp(argv[4], "-o") == 0 && strcmp(argv[6], "-n") == 0)
+    {
+      return write_file(argv[3], atoi(argv[5]), atoi(argv[7]), 1, 0);
     }
 
     break;

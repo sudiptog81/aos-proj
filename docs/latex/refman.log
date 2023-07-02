@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.14)  2 JUL 2023 11:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.14)  3 JUL 2023 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,11 +930,12 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
  [1
 
 
-] [2] [3]) [4]
-Chapter 2.
-(./files.tex) [5
+] [2] [3]) [4] [5]
+[6
 
-] [6
+]
+Chapter 2.
+(./files.tex) [7] [8
 
 ]
 Chapter 3.
@@ -960,7 +961,7 @@ LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 28.
-[7]
+[9]
 Underfull \hbox (badness 10000) detected at line 49
 [][][]
  []
@@ -970,7 +971,7 @@ Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
-[8]
+[10]
 Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
@@ -985,12 +986,12 @@ Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
-[9]
+[11]
 Underfull \hbox (badness 10000) detected at line 71
 [][][]
  []
 
-[10]
+[12]
 Underfull \hbox (badness 10000) detected at line 89
 [][][]
  []
@@ -1000,12 +1001,12 @@ Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
-[11]
+[13]
 Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
 
-) (./named__pipe_8h_source.tex) (./read__file_8h.tex [12]
+) (./named__pipe_8h_source.tex) (./read__file_8h.tex [14]
 Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
@@ -1015,12 +1016,12 @@ Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
 
-) (./read__file_8h_source.tex) (./stat__file_8h.tex [13]
+) (./read__file_8h_source.tex) (./stat__file_8h.tex [15]
 Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
-[14]
+[16]
 Underfull \hbox (badness 10000) detected at line 62
 [][][]
  []
@@ -1035,7 +1036,7 @@ Underfull \hbox (badness 10000) detected at line 20
 [][][]
  []
 
-) (./syscalls_8h_source.tex) (./unnamed__pipe_8h.tex [15]
+) (./syscalls_8h_source.tex) (./unnamed__pipe_8h.tex [17]
 Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
@@ -1045,50 +1046,55 @@ Underfull \hbox (badness 10000) detected at line 40
 [][][]
  []
 
-) (./unnamed__pipe_8h_source.tex) (./usage_8h.tex [16]
+) (./unnamed__pipe_8h_source.tex) (./usage_8h.tex [18]
 Underfull \hbox (badness 10000) detected at line 21
 [][][]
  []
 
-) (./usage_8h_source.tex) (./write__file_8h.tex [17]
+) (./usage_8h_source.tex) (./write__file_8h.tex [19]
 Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
-[18]
-Underfull \hbox (badness 10000) detected at line 51
+
+Overfull \vbox (21.76826pt too high) has occurred while \output is active []
+
+
+[20]
+Underfull \hbox (badness 10000) detected at line 55
 [][][]
  []
 
-) (./write__file_8h_source.tex) [19] [20
+) (./write__file_8h_source.tex) [21] [22
 
-] (./refman.ind [21
+] (./refman.ind [23
 
 
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: CB7C29911CAC9A7A54963A1BA9B469C8;14504.
+(rerunfilecheck)             Checksum: 12C4E5D5CD387B8C02C5210A89D4C58D;14796.
  ) 
 Here is how much of TeX's memory you used:
- 18374 strings out of 476025
- 295424 string characters out of 5796532
+ 18382 strings out of 476025
+ 295538 string characters out of 5796532
  1868388 words of memory out of 5000000
- 38267 multiletter control sequences out of 15000+600000
+ 38271 multiletter control sequences out of 15000+600000
  570636 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,15n,117p,658b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/co
-urier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></u
-sr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/
-fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/hel
-vetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (25 pages, 142040 bytes).
+ts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pf
+b></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-
+dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw
+/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
+b></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (27 pages, 152508 bytes).
 PDF statistics:
- 741 PDF objects out of 1000 (max. 8388607)
- 689 compressed objects within 7 object streams
- 173 named destinations out of 1000 (max. 500000)
- 601 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 762 PDF objects out of 1000 (max. 8388607)
+ 705 compressed objects within 8 object streams
+ 177 named destinations out of 1000 (max. 500000)
+ 609 words of extra memory for PDF output out of 10000 (max. 10000000)
 

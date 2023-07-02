@@ -20,7 +20,7 @@
  *
  * @param path the absolute or relative path of the file to create with filename
  * @param perms the permissions to set for the file using mode bits
- * @param file_type flag to denote regular file or named pipe
+ * @param file_type flag to denote regular file (0) or named pipe (-1)
  * @param force_flag flag to force create if the file exists
  * @return 0 on success, -1 on failure
  */

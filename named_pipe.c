@@ -15,15 +15,16 @@ int named_pipe(const char *path, const int read_flag, const int force_flag)
 
   int n, fd;
   char *string;
+  struct stat sb;
   size_t len = BUFSIZE;
 
   if (read_flag == 0) // open named pipe for writing
   {
-    fd = open(path, O_WRONLY);
+    n = stat(path, &sb);
 
     if (force_flag == 0)
     {
-      if (fd < 0)
+      if (n < 0)
       {
         n = mknod(path, __S_IFIFO | 0666, 0);
 
@@ -34,6 +35,15 @@ int named_pipe(const char *path, const int read_flag, const int force_flag)
         }
 
         fd = open(path, O_WRONLY);
+      }
+      else if (S_ISFIFO(sb.st_mode))
+      {
+        fd = open(path, O_WRONLY);
+      }
+      else
+      {
+        printf("Error: %s is not a named pipe\n", path);
+        return -1;
       }
     }
     else

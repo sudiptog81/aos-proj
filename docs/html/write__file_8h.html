@@ -83,16 +83,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afa284f124ba2653a29d6b06176bfc3fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__file_8h.html#afa284f124ba2653a29d6b06176bfc3fb">write_file</a> (const char *, const int, const int, const int)</td></tr>
-<tr class="memdesc:afa284f124ba2653a29d6b06176bfc3fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes to a regular file from <code>stdin</code> using the <code>write()</code> system call.  <br /></td></tr>
-<tr class="separator:afa284f124ba2653a29d6b06176bfc3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68c8c9f10d273008d7b09afdc7ff592a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__file_8h.html#a68c8c9f10d273008d7b09afdc7ff592a">write_file</a> (const char *, const int, const int, const int, const int)</td></tr>
+<tr class="memdesc:a68c8c9f10d273008d7b09afdc7ff592a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes to a regular file from <code>stdin</code> using the <code>write()</code> system call.  <br /></td></tr>
+<tr class="separator:a68c8c9f10d273008d7b09afdc7ff592a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module to write to a file using system calls. </p>
 <dl class="section author"><dt>Author</dt><dd>Sudipto Ghosh </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="afa284f124ba2653a29d6b06176bfc3fb" name="afa284f124ba2653a29d6b06176bfc3fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa284f124ba2653a29d6b06176bfc3fb">&#9670;&#160;</a></span>write_file()</h2>
+<a id="a68c8c9f10d273008d7b09afdc7ff592a" name="a68c8c9f10d273008d7b09afdc7ff592a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68c8c9f10d273008d7b09afdc7ff592a">&#9670;&#160;</a></span>write_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,6 +119,12 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>append_flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>force_flag</em>&#160;</td>
         </tr>
         <tr>
@@ -130,6 +136,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Writes to a regular file from <code>stdin</code> using the <code>write()</code> system call. </p>
+<p>If used with the append_flag set, it appends to the file instead of overwriting it. The offset and nBytes can be used to write a specified number of bytes to a specific location in the file.</p>
 <p>It uses <code>getline()</code> to read ther user input from <code>stdin</code> and writes to the file using <code>write()</code> system call. The user has to enter <code>:w</code> to stop writing to the file and close its file descriptor.</p>
 <p>This function is invoked by the <code>write</code> command.</p>
 <p>In case the file already exists, the user is prompted for confirmation and needs to pass the <code>-f</code> flag to force this operation. It either truncates the file or creates the file with the default permissions of <code>0644</code>.</p>
@@ -138,6 +145,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>the absolute or relative path to the file to be written </td></tr>
     <tr><td class="paramname">offset</td><td>the offset from the beginning of the file to start writing </td></tr>
     <tr><td class="paramname">nBytes</td><td>the number of bytes to write to the file, -1 to read the entire file </td></tr>
+    <tr><td class="paramname">append_flag</td><td>flag to append to the file instead of overwriting it </td></tr>
     <tr><td class="paramname">force_flag</td><td>flag to force truncate first if the file exists </td></tr>
   </table>
   </dd>

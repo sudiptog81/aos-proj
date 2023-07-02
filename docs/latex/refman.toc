@@ -11,66 +11,67 @@
 \contentsline {subsubsection}{\numberline {1.3.2.2}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Reading a File (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}With Offset and Number of Bytes)}{2}{subsubsection.1.3.2.2}%
 \contentsline {subsection}{\numberline {1.3.3}Writing to Files}{2}{subsection.1.3.3}%
 \contentsline {subsubsection}{\numberline {1.3.3.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Writing to a File}{3}{subsubsection.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.3.2}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Appending to a Fileipsum}{3}{subsubsection.1.3.3.2}%
 \contentsline {subsection}{\numberline {1.3.4}Copying Files}{3}{subsection.1.3.4}%
 \contentsline {subsubsection}{\numberline {1.3.4.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Copying a File}{3}{subsubsection.1.3.4.1}%
 \contentsline {subsection}{\numberline {1.3.5}File Information}{3}{subsection.1.3.5}%
 \contentsline {subsubsection}{\numberline {1.3.5.1}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Displaying File Information (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Regular File)}{3}{subsubsection.1.3.5.1}%
-\contentsline {subsubsection}{\numberline {1.3.5.2}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Displaying File Information (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Special File)}{3}{subsubsection.1.3.5.2}%
+\contentsline {subsubsection}{\numberline {1.3.5.2}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}: Displaying File Information (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Special File)}{4}{subsubsection.1.3.5.2}%
 \contentsline {subsection}{\numberline {1.3.6}Pipes}{4}{subsection.1.3.6}%
 \contentsline {subsubsection}{\numberline {1.3.6.1}Unnamed Pipes}{4}{subsubsection.1.3.6.1}%
 \contentsline {subsubsection}{\numberline {1.3.6.2}Named Pipes}{4}{subsubsection.1.3.6.2}%
-\contentsline {section}{\numberline {1.4}Author}{4}{section.1.4}%
-\contentsline {chapter}{\numberline {2}File Index}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}File List}{5}{section.2.1}%
-\contentsline {chapter}{\numberline {3}File Documentation}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{7}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{7}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Function Documentation}{7}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}copy\_file()}{7}{subsubsection.3.1.2.1}%
-\contentsline {section}{\numberline {3.2}copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{8}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{8}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Function Documentation}{8}{subsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}create\_file()}{8}{subsubsection.3.3.2.1}%
-\contentsline {section}{\numberline {3.4}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{9}{section.3.4}%
-\contentsline {section}{\numberline {3.5}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{9}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{10}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Function Documentation}{10}{subsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.1}flush\_buffer()}{10}{subsubsection.3.5.2.1}%
-\contentsline {subsubsection}{\numberline {3.5.2.2}parse\_command()}{10}{subsubsection.3.5.2.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.3}parse\_perms()}{10}{subsubsection.3.5.2.3}%
-\contentsline {section}{\numberline {3.6}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{11}{section.3.6}%
-\contentsline {section}{\numberline {3.7}named\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{11}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{11}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Function Documentation}{11}{subsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.2.1}named\_pipe()}{12}{subsubsection.3.7.2.1}%
-\contentsline {section}{\numberline {3.8}named\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{12}{section.3.8}%
-\contentsline {section}{\numberline {3.9}read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{12}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{13}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}Function Documentation}{13}{subsection.3.9.2}%
-\contentsline {subsubsection}{\numberline {3.9.2.1}read\_file()}{13}{subsubsection.3.9.2.1}%
-\contentsline {section}{\numberline {3.10}read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{13}{section.3.10}%
-\contentsline {section}{\numberline {3.11}stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{13}{section.3.11}%
-\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{14}{subsection.3.11.1}%
-\contentsline {subsection}{\numberline {3.11.2}Function Documentation}{14}{subsection.3.11.2}%
-\contentsline {subsubsection}{\numberline {3.11.2.1}stat\_file()}{14}{subsubsection.3.11.2.1}%
-\contentsline {section}{\numberline {3.12}stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{15}{section.3.12}%
-\contentsline {section}{\numberline {3.13}syscalls.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{15}{section.3.13}%
-\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{15}{subsection.3.13.1}%
-\contentsline {section}{\numberline {3.14}syscalls.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{15}{section.3.14}%
-\contentsline {section}{\numberline {3.15}unnamed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{16}{section.3.15}%
-\contentsline {subsection}{\numberline {3.15.1}Detailed Description}{16}{subsection.3.15.1}%
-\contentsline {subsection}{\numberline {3.15.2}Function Documentation}{16}{subsection.3.15.2}%
-\contentsline {subsubsection}{\numberline {3.15.2.1}unnamed\_pipe()}{16}{subsubsection.3.15.2.1}%
-\contentsline {section}{\numberline {3.16}unnamed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.3.16}%
-\contentsline {section}{\numberline {3.17}usage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{17}{section.3.17}%
-\contentsline {subsection}{\numberline {3.17.1}Detailed Description}{17}{subsection.3.17.1}%
-\contentsline {subsection}{\numberline {3.17.2}Function Documentation}{17}{subsection.3.17.2}%
-\contentsline {subsubsection}{\numberline {3.17.2.1}print\_usage\_command()}{17}{subsubsection.3.17.2.1}%
-\contentsline {section}{\numberline {3.18}usage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.3.18}%
-\contentsline {section}{\numberline {3.19}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{18}{section.3.19}%
-\contentsline {subsection}{\numberline {3.19.1}Detailed Description}{18}{subsection.3.19.1}%
-\contentsline {subsection}{\numberline {3.19.2}Function Documentation}{18}{subsection.3.19.2}%
-\contentsline {subsubsection}{\numberline {3.19.2.1}write\_file()}{18}{subsubsection.3.19.2.1}%
-\contentsline {section}{\numberline {3.20}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.3.20}%
-\contentsline {chapter}{Index}{21}{section*.11}%
+\contentsline {section}{\numberline {1.4}Author}{5}{section.1.4}%
+\contentsline {chapter}{\numberline {2}File Index}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{7}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Documentation}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{9}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Function Documentation}{9}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}copy\_file()}{9}{subsubsection.3.1.2.1}%
+\contentsline {section}{\numberline {3.2}copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{10}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{10}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Function Documentation}{10}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}create\_file()}{10}{subsubsection.3.3.2.1}%
+\contentsline {section}{\numberline {3.4}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{11}{section.3.4}%
+\contentsline {section}{\numberline {3.5}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{11}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{12}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Function Documentation}{12}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}flush\_buffer()}{12}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}parse\_command()}{12}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}parse\_perms()}{12}{subsubsection.3.5.2.3}%
+\contentsline {section}{\numberline {3.6}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{13}{section.3.6}%
+\contentsline {section}{\numberline {3.7}named\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{13}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{13}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Function Documentation}{13}{subsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}named\_pipe()}{14}{subsubsection.3.7.2.1}%
+\contentsline {section}{\numberline {3.8}named\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{14}{section.3.8}%
+\contentsline {section}{\numberline {3.9}read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{14}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{15}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Function Documentation}{15}{subsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.1}read\_file()}{15}{subsubsection.3.9.2.1}%
+\contentsline {section}{\numberline {3.10}read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{15}{section.3.10}%
+\contentsline {section}{\numberline {3.11}stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{15}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{16}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}Function Documentation}{16}{subsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.2.1}stat\_file()}{16}{subsubsection.3.11.2.1}%
+\contentsline {section}{\numberline {3.12}stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.3.12}%
+\contentsline {section}{\numberline {3.13}syscalls.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{17}{section.3.13}%
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{17}{subsection.3.13.1}%
+\contentsline {section}{\numberline {3.14}syscalls.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.3.14}%
+\contentsline {section}{\numberline {3.15}unnamed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{18}{section.3.15}%
+\contentsline {subsection}{\numberline {3.15.1}Detailed Description}{18}{subsection.3.15.1}%
+\contentsline {subsection}{\numberline {3.15.2}Function Documentation}{18}{subsection.3.15.2}%
+\contentsline {subsubsection}{\numberline {3.15.2.1}unnamed\_pipe()}{18}{subsubsection.3.15.2.1}%
+\contentsline {section}{\numberline {3.16}unnamed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pipe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.3.16}%
+\contentsline {section}{\numberline {3.17}usage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{19}{section.3.17}%
+\contentsline {subsection}{\numberline {3.17.1}Detailed Description}{19}{subsection.3.17.1}%
+\contentsline {subsection}{\numberline {3.17.2}Function Documentation}{19}{subsection.3.17.2}%
+\contentsline {subsubsection}{\numberline {3.17.2.1}print\_usage\_command()}{19}{subsubsection.3.17.2.1}%
+\contentsline {section}{\numberline {3.18}usage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.3.18}%
+\contentsline {section}{\numberline {3.19}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{20}{section.3.19}%
+\contentsline {subsection}{\numberline {3.19.1}Detailed Description}{20}{subsection.3.19.1}%
+\contentsline {subsection}{\numberline {3.19.2}Function Documentation}{20}{subsection.3.19.2}%
+\contentsline {subsubsection}{\numberline {3.19.2.1}write\_file()}{20}{subsubsection.3.19.2.1}%
+\contentsline {section}{\numberline {3.20}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{section.3.20}%
+\contentsline {chapter}{Index}{23}{section*.11}%

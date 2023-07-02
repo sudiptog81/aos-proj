@@ -8,7 +8,7 @@ Module to write to a file using system calls.
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{write__file_8h_afa284f124ba2653a29d6b06176bfc3fb}{write\+\_\+file}} (const char $\ast$, const int, const int, const int)
+int \mbox{\hyperlink{write__file_8h_a68c8c9f10d273008d7b09afdc7ff592a}{write\+\_\+file}} (const char $\ast$, const int, const int, const int, const int)
 \begin{DoxyCompactList}\small\item\em Writes to a regular file from {\ttfamily stdin} using the {\ttfamily write()} system call. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -21,15 +21,17 @@ Sudipto Ghosh
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{write__file_8h_afa284f124ba2653a29d6b06176bfc3fb}\label{write__file_8h_afa284f124ba2653a29d6b06176bfc3fb}} 
+\mbox{\Hypertarget{write__file_8h_a68c8c9f10d273008d7b09afdc7ff592a}\label{write__file_8h_a68c8c9f10d273008d7b09afdc7ff592a}} 
 \index{write\_file.h@{write\_file.h}!write\_file@{write\_file}}
 \index{write\_file@{write\_file}!write\_file.h@{write\_file.h}}
 \doxysubsubsection{\texorpdfstring{write\_file()}{write\_file()}}
-{\footnotesize\ttfamily int write\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const int}]{offset,  }\item[{const int}]{n\+Bytes,  }\item[{const int}]{force\+\_\+flag }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int write\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const int}]{offset,  }\item[{const int}]{n\+Bytes,  }\item[{const int}]{append\+\_\+flag,  }\item[{const int}]{force\+\_\+flag }\end{DoxyParamCaption})}
 
 
 
 Writes to a regular file from {\ttfamily stdin} using the {\ttfamily write()} system call. 
+
+If used with the append\+\_\+flag set, it appends to the file instead of overwriting it. The offset and n\+Bytes can be used to write a specified number of bytes to a specific location in the file.
 
 It uses {\ttfamily getline()} to read ther user input from {\ttfamily stdin} and writes to the file using {\ttfamily write()} system call. The user has to enter {\ttfamily \+:w} to stop writing to the file and close its file descriptor.
 
@@ -44,6 +46,8 @@ In case the file already exists, the user is prompted for confirmation and needs
 {\em offset} & the offset from the beginning of the file to start writing \\
 \hline
 {\em n\+Bytes} & the number of bytes to write to the file, -\/1 to read the entire file \\
+\hline
+{\em append\+\_\+flag} & flag to append to the file instead of overwriting it \\
 \hline
 {\em force\+\_\+flag} & flag to force truncate first if the file exists \\
 \hline
