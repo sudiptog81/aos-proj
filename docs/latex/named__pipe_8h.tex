@@ -8,7 +8,7 @@ Module to demonstrate use of named pipes for message passing.
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{named__pipe_8h_a67c6d217b24059cd6845bb190317da91}{named\+\_\+pipe}} (const char $\ast$, const int)
+int \mbox{\hyperlink{named__pipe_8h_a5bae14d7142881c650307892c7c0a48e}{named\+\_\+pipe}} (const char $\ast$, const int, const int)
 \begin{DoxyCompactList}\small\item\em Uses named pipes for message passing between reader and writer processes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -21,11 +21,11 @@ Sudipto Ghosh
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{named__pipe_8h_a67c6d217b24059cd6845bb190317da91}\label{named__pipe_8h_a67c6d217b24059cd6845bb190317da91}} 
+\mbox{\Hypertarget{named__pipe_8h_a5bae14d7142881c650307892c7c0a48e}\label{named__pipe_8h_a5bae14d7142881c650307892c7c0a48e}} 
 \index{named\_pipe.h@{named\_pipe.h}!named\_pipe@{named\_pipe}}
 \index{named\_pipe@{named\_pipe}!named\_pipe.h@{named\_pipe.h}}
 \doxysubsubsection{\texorpdfstring{named\_pipe()}{named\_pipe()}}
-{\footnotesize\ttfamily int named\+\_\+pipe (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const int}]{read\+\_\+flag }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int named\+\_\+pipe (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const int}]{read\+\_\+flag,  }\item[{const int}]{force\+\_\+flag }\end{DoxyParamCaption})}
 
 
 
@@ -44,6 +44,8 @@ In read mode, the program will wait for a writer to write to the named pipe and 
 {\em path} & the path to the named pipe \\
 \hline
 {\em read\+\_\+flag} & 0 for write mode, 1 for read mode \\
+\hline
+{\em force\+\_\+flag} & 0 to create a new named pipe, 1 to use an existing named pipe \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

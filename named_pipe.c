@@ -8,23 +8,50 @@
 
 #include "helpers.h"
 
-extern char buf[1024];
+extern char buf[BUFSIZE];
 
-int named_pipe(const char *path, const int read_flag)
+int named_pipe(const char *path, const int read_flag, const int force_flag)
 {
 
   int n, fd;
   char *string;
-  size_t len = 1024;
+  size_t len = BUFSIZE;
 
   if (read_flag == 0) // open named pipe for writing
   {
     fd = open(path, O_WRONLY);
 
-    if (fd < 0)
+    if (force_flag == 0)
     {
-      printf("Error opening named pipe\n");
-      return -1;
+      if (fd < 0)
+      {
+        n = mknod(path, __S_IFIFO | 0666, 0);
+
+        if (n < 0)
+        {
+          printf("Error creating named pipe\n");
+          return -1;
+        }
+
+        fd = open(path, O_WRONLY);
+      }
+    }
+    else
+    {
+      if (fd > -1)
+      {
+        unlink(path);
+      }
+
+      n = mknod(path, __S_IFIFO | 0666, 0);
+
+      if (n < 0)
+      {
+        printf("Error creating named pipe\n");
+        return -1;
+      }
+
+      fd = open(path, O_WRONLY);
     }
 
     printf("type :q to exit\n----------------\n");
@@ -57,7 +84,7 @@ int named_pipe(const char *path, const int read_flag)
 
     if (fd < 0)
     {
-      printf("Error opening file\n");
+      printf("Error opening named pipe for reading...\n");
       return -1;
     }
 

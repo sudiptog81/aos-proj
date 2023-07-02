@@ -9,6 +9,8 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#define BUFSIZE 1024
+
 /**
  * @file helpers.h
  * @author Sudipto Ghosh

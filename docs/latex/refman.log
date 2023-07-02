@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.14)  27 JUN 2023 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.14)  2 JUL 2023 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,27 +906,27 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 22.39185pt on input line 179.
 (./index.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 7.
+
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 5.
+(Font)              scaled to size 12.9599pt on input line 7.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-0.
- (/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
+2.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 10.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
-.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+(Font)              scaled to size 8.99994pt on input line 12.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 18.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 18.
+(Font)              scaled to size 8.99994pt on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 35.
+(Font)              scaled to size 10.79993pt on input line 37.
  [1
 
 
@@ -981,17 +981,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--15
  []
 
 
-Underfull \hbox (badness 10000) detected at line 29
+Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
 [9]
-Underfull \hbox (badness 10000) detected at line 65
+Underfull \hbox (badness 10000) detected at line 71
 [][][]
  []
 
 [10]
-Underfull \hbox (badness 10000) detected at line 83
+Underfull \hbox (badness 10000) detected at line 89
 [][][]
  []
 
@@ -1001,16 +1001,16 @@ Underfull \hbox (badness 10000) detected at line 18
  []
 
 [11]
-Underfull \hbox (badness 10000) detected at line 49
+Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
 
-) (./named__pipe_8h_source.tex) (./read__file_8h.tex
+) (./named__pipe_8h_source.tex) (./read__file_8h.tex [12]
 Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
-[12]
+
 Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
@@ -1068,16 +1068,16 @@ Underfull \hbox (badness 10000) detected at line 51
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 0631393000222054A34B61BD95F41C2C;14504.
+(rerunfilecheck)             Checksum: CB7C29911CAC9A7A54963A1BA9B469C8;14504.
  ) 
 Here is how much of TeX's memory you used:
- 18371 strings out of 476025
- 295323 string characters out of 5796532
+ 18374 strings out of 476025
+ 295424 string characters out of 5796532
  1868388 words of memory out of 5000000
- 38266 multiletter control sequences out of 15000+600000
+ 38267 multiletter control sequences out of 15000+600000
  570636 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,16n,117p,658b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,15n,117p,658b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/co
@@ -1085,10 +1085,10 @@ urier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></u
 sr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/hel
 vetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (25 pages, 140948 bytes).
+Output written on refman.pdf (25 pages, 142040 bytes).
 PDF statistics:
- 738 PDF objects out of 1000 (max. 8388607)
- 686 compressed objects within 7 object streams
- 171 named destinations out of 1000 (max. 500000)
+ 741 PDF objects out of 1000 (max. 8388607)
+ 689 compressed objects within 7 object streams
+ 173 named destinations out of 1000 (max. 500000)
  601 words of extra memory for PDF output out of 10000 (max. 10000000)
 

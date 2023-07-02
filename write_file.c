@@ -12,7 +12,7 @@ int write_file(const char *path, const int offset, const int nBytes, const int f
 {
   int n, fd;
   char *string;
-  size_t len = 1024;
+  size_t len = BUFSIZE;
 
   // check if file exists when -f is not used
   if (force_flag == 0)
@@ -32,7 +32,7 @@ int write_file(const char *path, const int offset, const int nBytes, const int f
   // create file if it doesn't exist when -f is used
   else
   {
-    fd = open(path, O_WRONLY | O_TRUNC | O_CREAT, 0644);
+    fd = open(path, O_WRONLY | O_TRUNC, 0);
   }
 
   // handle errors in opening file

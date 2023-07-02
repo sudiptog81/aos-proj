@@ -8,14 +8,14 @@
 
 #include "helpers.h"
 
-extern char buf[1024];
+extern char buf[BUFSIZE];
 
 int unnamed_pipe(void)
 {
   pid_t pid;
   int n, fd[2];
   char *string;
-  size_t len = 1024;
+  size_t len = BUFSIZE;
 
   // create unnamed pipe
   if (pipe(fd) < 0)

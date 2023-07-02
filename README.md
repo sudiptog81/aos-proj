@@ -4,6 +4,8 @@ This is a command-line program that can be used to demonstrate system calls in U
 
 This project was done as a part of the Advanced Operating Systems (MCSC202) course at the University of Delhi.
 
+Function references are available online at <https://syscalls-cli.ghosh.pro/html/files.html>.
+
 ## Features
 
 This program supports the following features as of now:
@@ -159,10 +161,10 @@ The `pipe` command should be used to create a pipe and simulate communication be
 
 #### Unnamed Pipes
 
-If used without arguments, it creates an unnamed pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter the contents of the pipe. To end the input, the user has to type `:q` followed by the `Enter` key. Internally, the program forks a child process and the parent process writes to the pipe and the child process reads it from the pipe and prints the contents to `stdout`.
+If used with `-u` flag, it creates an unnamed pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter the contents of the pipe. To end the input, the user has to type `:q` followed by the `Enter` key. Internally, the program forks a child process and the parent process writes to the pipe and the child process reads it from the pipe and prints the contents to `stdout`.
 
 ```bash
-$ ./main pipe         
+$ ./main pipe -u
 type :q to exit
 ----------------
 Message: Hello
@@ -173,7 +175,7 @@ Received Bye from Parent...
 
 #### Named Pipes
 
-If used with the `-p` flag, it uses a named pipe in the mode specified by the argument after the path of the pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter some text and press `Enter` to send the message. To end the input, the user has to type `:q` followed by the `Enter` key. 
+If a path is specified, it uses a named pipe in the mode (reader or writer) specified by the argument after the path of the pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter some text and press `Enter` to send the message. To end the input, the user has to type `:q` followed by the `Enter` key. If the pipe already exists, the program will force the user to pass the `-f` flag to overwrite it, otherwise, it will attempt to use the existing pipe.
 
 Multiple instances of the program have to be run to demonstrate communication between processes. In case multiple readers are waiting for a writer, the first reader to read from the pipe will receive the message and the rest will receive an empty string. This is because the message is removed from the pipe after it is read. Which reader receives the message is determined by the operating system scheduler.
 

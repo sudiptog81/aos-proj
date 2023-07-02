@@ -8,7 +8,7 @@
 
 #include "helpers.h"
 
-extern char buf[1024];
+extern char buf[BUFSIZE];
 
 int copy_file(const char *src, const char *dest, const int force_flag)
 {
@@ -63,7 +63,7 @@ int copy_file(const char *src, const char *dest, const int force_flag)
     flush_buffer(buf);
 
     // read from source file and write to pipe
-    while ((n = read(fd_src, buf, 1024)) > 0)
+    while ((n = read(fd_src, buf, BUFSIZE)) > 0)
     {
       write(pipefd[1], buf, n);
       flush_buffer(buf);
@@ -77,7 +77,7 @@ int copy_file(const char *src, const char *dest, const int force_flag)
     flush_buffer(buf);
 
     // read from pipe and write to destination file
-    while ((n = read(pipefd[0], buf, 1024)) > 0)
+    while ((n = read(pipefd[0], buf, BUFSIZE)) > 0)
     {
       write(fd_dest, buf, n);
       flush_buffer(buf);

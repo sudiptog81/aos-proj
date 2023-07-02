@@ -24,8 +24,9 @@
  *
  * @param path the path to the named pipe
  * @param read_flag  0 for write mode, 1 for read mode
+ * @param force_flag 0 to create a new named pipe, 1 to use an existing named pipe
  * @return 0 on success, -1 on failure
  */
-int named_pipe(const char *, const int);
+int named_pipe(const char *, const int, const int);
 
 #endif

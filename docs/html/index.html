@@ -75,6 +75,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> This is a command-line program that can be used to demonstrate system calls in UNIX. It is written in C and uses the GNU C Library and the POSIX API.</p>
 <p>This project was done as a part of the Advanced Operating Systems (MCSC202) course at the University of Delhi.</p>
+<p>Function references are available online at <a href="https://syscalls-cli.ghosh.pro/html/files.html">https://syscalls-cli.ghosh.pro/html/files.html</a>.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Features</h1>
 <p>This program supports the following features as of now:</p>
@@ -191,8 +192,8 @@ Pipes</h2>
 <p>The <code>pipe</code> command should be used to create a pipe and simulate communication between two processes. This program can demonstrate this using both unnamed as well as named pipes.</p>
 <h3><a class="anchor" id="autotoc_md18"></a>
 Unnamed Pipes</h3>
-<p>If used without arguments, it creates an unnamed pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter the contents of the pipe. To end the input, the user has to type <code>:q</code> followed by the <code>Enter</code> key. Internally, the program forks a child process and the parent process writes to the pipe and the child process reads it from the pipe and prints the contents to <code>stdout</code>.</p>
-<div class="fragment"><div class="line">$ ./main pipe         </div>
+<p>If used with <code>-u</code> flag, it creates an unnamed pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter the contents of the pipe. To end the input, the user has to type <code>:q</code> followed by the <code>Enter</code> key. Internally, the program forks a child process and the parent process writes to the pipe and the child process reads it from the pipe and prints the contents to <code>stdout</code>.</p>
+<div class="fragment"><div class="line">$ ./main pipe -u</div>
 <div class="line">type :q to exit</div>
 <div class="line">----------------</div>
 <div class="line">Message: Hello</div>
@@ -201,7 +202,7 @@ Unnamed Pipes</h3>
 <div class="line">Received Bye from Parent...</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md19"></a>
 Named Pipes</h3>
-<p>If used with the <code>-p</code> flag, it uses a named pipe in the mode specified by the argument after the path of the pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter some text and press <code>Enter</code> to send the message. To end the input, the user has to type <code>:q</code> followed by the <code>Enter</code> key.</p>
+<p>If a path is specified, it uses a named pipe in the mode (reader or writer) specified by the argument after the path of the pipe. The user is prompted with a message to enter the text to be written to the pipe. The user can enter some text and press <code>Enter</code> to send the message. To end the input, the user has to type <code>:q</code> followed by the <code>Enter</code> key. If the pipe already exists, the program will force the user to pass the <code>-f</code> flag to overwrite it, otherwise, it will attempt to use the existing pipe.</p>
 <p>Multiple instances of the program have to be run to demonstrate communication between processes. In case multiple readers are waiting for a writer, the first reader to read from the pipe will receive the message and the rest will receive an empty string. This is because the message is removed from the pipe after it is read. Which reader receives the message is determined by the operating system scheduler.</p>
 <div class="fragment"><div class="line"># writer process</div>
 <div class="line">$ ./main pipe pipe w        </div>

@@ -34,7 +34,7 @@
 \contentsline {subsubsection}{\numberline {3.3.2.1}create\_file()}{8}{subsubsection.3.3.2.1}%
 \contentsline {section}{\numberline {3.4}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{9}{section.3.4}%
 \contentsline {section}{\numberline {3.5}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{9}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{9}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{10}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Function Documentation}{10}{subsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.2.1}flush\_buffer()}{10}{subsubsection.3.5.2.1}%
 \contentsline {subsubsection}{\numberline {3.5.2.2}parse\_command()}{10}{subsubsection.3.5.2.2}%
@@ -73,4 +73,4 @@
 \contentsline {subsection}{\numberline {3.19.2}Function Documentation}{18}{subsection.3.19.2}%
 \contentsline {subsubsection}{\numberline {3.19.2.1}write\_file()}{18}{subsubsection.3.19.2.1}%
 \contentsline {section}{\numberline {3.20}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.3.20}%
-\contentsline {chapter}{Index}{21}{section*.10}%
+\contentsline {chapter}{Index}{21}{section*.11}%

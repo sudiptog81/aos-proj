@@ -4,7 +4,8 @@
 #include "syscalls.h"
 #include "usage.h"
 
-char buf[1024];
+char buf[BUFSIZE];
+
 int main(int argc, char **argv)
 {
   if (argc < 2)
@@ -111,27 +112,43 @@ int main(int argc, char **argv)
     break;
 
   case 3:
-    if (argc != 2 && argc != 4)
+    if (argc < 3 || argc > 5)
     {
       print_usage_command("pipe");
       return -1;
     }
 
-    if (argc == 2 && unnamed_pipe() == -1)
-      return -1;
-    else if (argc == 4)
+    if (argc == 3 && strcmp(argv[2], "-u") != 0)
     {
-      if (strcmp(argv[3], "r") == 0)
-      {
-        if (named_pipe(argv[2], 1) == -1)
-          return -1;
-      }
-      else if (strcmp(argv[3], "w") == 0)
-      {
-        if (named_pipe(argv[2], 0) == -1)
-          return -1;
-      }
+      print_usage_command("pipe");
+      return -1;
     }
+    else if (argc == 3 && strcmp(argv[2], "-u") == 0)
+    {
+      return unnamed_pipe();
+    }
+    else if (argc == 5 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "r") == 0)
+    {
+      return named_pipe(argv[3], 1, 0);
+    }
+    else if (argc == 5 && strcmp(argv[2], "-f") == 0 && strcmp(argv[4], "w") == 0)
+    {
+      return named_pipe(argv[3], 0, 0);
+    }
+    else if (argc == 4 && strcmp(argv[2], "-f") != 0 && strcmp(argv[3], "r") == 0)
+    {
+      return named_pipe(argv[2], 1, 0);
+    }
+    else if (argc == 4 && strcmp(argv[2], "-f") != 0 && strcmp(argv[3], "w") == 0)
+    {
+      return named_pipe(argv[2], 0, 0);
+    }
+    else
+    {
+      print_usage_command("pipe");
+      return -1;
+    }
+
     break;
 
   case 4:

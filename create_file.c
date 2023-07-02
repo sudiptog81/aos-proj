@@ -8,7 +8,7 @@
 
 #include "helpers.h"
 
-extern char buf[1024];
+extern char buf[BUFSIZE];
 
 int create_file(const char *path, const int perms, const int pipe_flag, const int force_flag)
 {

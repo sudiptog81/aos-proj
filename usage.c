@@ -51,9 +51,11 @@ void print_usage_command(char *command)
   }
   else if (strcmp(command, "pipe") == 0)
   {
-    printf("Usage: ./main pipe [file] [mode]\n");
+    printf("Usage: ./main pipe [-u] [-f] [file] [mode]\n");
     printf("  file: the path for creating named pipe (optional) \n");
     printf("  mode: whether to open the pipe as a reader (r) or a writer (w) (if file specified)\n");
+    printf("  -f: create pipe if it doesn not exist\n");
+    printf("  -u: use unnamed pipe\n");
     return;
   }
   else if (strcmp(command, "info") == 0)

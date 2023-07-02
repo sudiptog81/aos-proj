@@ -8,7 +8,7 @@
 
 #include "helpers.h"
 
-extern char buf[1024];
+extern char buf[BUFSIZE];
 
 int read_file(const char *path, const int offset, const int nBytes)
 {
@@ -37,7 +37,10 @@ int read_file(const char *path, const int offset, const int nBytes)
     // read entire file
     while ((n = read(fd, buf, sizeof(buf))) > 0)
     {
-      printf("%s", buf);
+      for (int i = 0; i < n; i++)
+      {
+        printf("%c", buf[i]);
+      }
       flush_buffer(buf);
       tot += n;
     }
@@ -46,7 +49,10 @@ int read_file(const char *path, const int offset, const int nBytes)
   {
     // read nBytes from file
     n = read(fd, buf, nBytes);
-    printf("%s", buf);
+    for (int i = 0; i < n; i++)
+    {
+      printf("%c", buf[i]);
+    }
     flush_buffer(buf);
     tot += n;
   }

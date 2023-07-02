@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <string.h>
 
 int parse_command(const char *command)
@@ -39,6 +40,13 @@ int parse_perms(const char *permissions)
   {
     perms = perms * 8 + (permissions[i] - '0');
   }
+
+  if (perms > 0777)
+  {
+    printf("Invalid permissions\n");
+    return -1;
+  }
+
   return perms;
 }
 
