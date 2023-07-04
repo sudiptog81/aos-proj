@@ -94,10 +94,10 @@ lorem ipsum
 :w
 ```
 
-#### Example: Appending to a Fileipsum
+#### Example: Appending to a File from an offset
 
 ```bash
-$ ./main write -a file.txt
+$ ./main write -a file.txt -o 1000
 type :w to exit
 ---------------
 dolor amet
